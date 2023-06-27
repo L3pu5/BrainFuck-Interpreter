@@ -20,9 +20,9 @@ Brainfuck as a language has eight instructions, a data pointer, an instruction p
 ---
 ## Features:
 
-### Memory/Virutal machine
+### Memory/Virtual machine
 
-A 30,000 byte array is used in the virutal machine along with two pointers.
+A 30,000 byte array is used in the virtual machine along with two pointers.
 
 ### Instructions
 |Character |	Meaning|

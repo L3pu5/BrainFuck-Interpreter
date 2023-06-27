@@ -6,20 +6,22 @@
 #include <stdbool.h>
 #include <string.h>
 #include "vm.h"
+#include "lexer.h"
 #include "helper.h"
 
 void repl() {
     //Instantiate up VM
     initVM();
-    //Create a lexer
-    initLexer();
 
     printf("Entering brainfuck by L3pu5 repl loop.\n");
     bool keepReplAlive = true;
     while(keepReplAlive){ 
         char inputBuffer[1000]; 
         prompt();
-        scanf("%s", inputBuffer);
+        fgets(inputBuffer, 1000, stdin);
+        //Create a lexer
+        initLexer(inputBuffer);
+        parse();
     }
 }
 
